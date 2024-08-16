@@ -2,6 +2,29 @@
   require_once "validator.php";
 ?>
 
+<?
+
+    /*array vazia*/
+    $chamados= array();
+
+    /*arquivo aberto, inserido r para ler*/
+    $arquivo= fopen ('arquivo.hd','r'); 
+
+    /*while serve para que tudo que esteja na variável arquivo repita até ser satisfeita, feof segnifica fim de arquivo, como temos o ! ele não será satisfeito tornando a repetir*/
+    while(!feof($arquivo)) {
+
+    /*variável com o fgets para ser lido linha por linha do arquivo*/
+      $registro- fgets($arquivo, 2024);
+
+    /*variável com o objetivo de guardar na chamada tudo o que esteja no registro*/
+      $chamados[]= $registro;
+
+    }
+
+?>
+
+
+
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8" />
